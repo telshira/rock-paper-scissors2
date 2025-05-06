@@ -16,11 +16,10 @@ function getHumanChoice() {
     if (humanChoice === "rock" || humanChoice === "paper" || humanChoice === "scissors") {
       return humanChoice;
     } else {
-      prompt("You didn't pick rock, paper, or scissors. Please try again.")
+      prompt("You didn't pick rock, paper, or scissors. Please try again.");
     }
   }
-  
-  return humanChoice;
+
 }
 
 function playGame() {
