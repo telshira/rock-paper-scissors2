@@ -5,7 +5,21 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-  let humanChoice = prompt("Please pick rock, paper, or scissors.");
+  let humanChoice; 
+
+  while(true) {
+    humanChoice = prompt("Please pick rock, paper, or scissors.");
+    
+    if (!humanChoice) continue; //Skip if statement if null or empty
+
+    humanChoice = humanChoice.toLowerCase();
+    if (humanChoice === "rock" || humanChoice === "paper" || humanChoice === "scissors") {
+      return humanChoice;
+    } else {
+      prompt("You didn't pick rock, paper, or scissors. Please try again.")
+    }
+  }
+  
   return humanChoice;
 }
 
