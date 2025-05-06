@@ -12,8 +12,8 @@ function getHumanChoice() {
     
     if (!humanChoice) continue; //Skip if statement if null or empty
 
-    humanChoice = humanChoice.toLowerCase();
-    if (humanChoice === "rock" || humanChoice === "paper" || humanChoice === "scissors") {
+    humanChoice = humanChoice.toUpperCase();
+    if (humanChoice === "ROCK" || humanChoice === "PAPER" || humanChoice === "SCISSORS") {
       return humanChoice;
     } else {
       prompt("You didn't pick rock, paper, or scissors. Please try again.");
@@ -27,7 +27,6 @@ function playGame() {
   let computerScore = 0;
 
   function playRound(humanChoice, computerChoice) {
-    humanChoice = humanChoice.toUpperCase();
     computerChoice = computerChoice.toUpperCase();
   
     if (humanChoice === computerChoice) {
